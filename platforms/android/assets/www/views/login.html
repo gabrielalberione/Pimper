@@ -1,0 +1,19 @@
+<div id="login" ng-controller="loginController">
+	<div class="grad"></div>
+	<div class="contenedor">
+		<div id="logo">
+			<div><img src="./images/logo.png" alt="NO HAY IMAGEN" style="max-height: 100px; margin: auto;" class="img-responsive"></div>
+		</div>	
+		<div id="form_login">
+			<form role="form" name="loginForm" id="login-form" ng-submit="login(evento)" autocomplete="off">
+				<input type="password" name="clave" ng-model="evento.clave" placeholder="Clave del evento...">
+				<button ng-class="{btnDisabled: banCargando == true}" type="submit" ng-disabled="banCargando">
+					<span ng-if="banCargando == false">ENTRAR AL EVENTO</span>
+					<span ng-if="banCargando">ENTRANDO...</span>
+				</button>
+			</form>
+			<a ng-click="abrirWeb()" class="btn btn-lg btn-default" style="margin-top: 20px; width: 100%;">¿Quién es Lukas?</a>
+		</div>
+
+    </div> <!-- /.container -->
+</div>
